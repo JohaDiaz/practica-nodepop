@@ -1,5 +1,6 @@
 import * as homeController from './controllers/homeControllers.js'
 import * as loginController from './controllers/loginControllers.js'
+import * as newproductController from './controllers/newproductControllers.js'
 import express from 'express'
 import createError from 'http-errors'
 import logger from 'morgan'
@@ -18,6 +19,7 @@ app.use(express.static('public'))
 
 app.get('/', homeController.index)
 app.get('/login', loginController.index)
+app.get('/newproduct', newproductController.index)
 
 
 
